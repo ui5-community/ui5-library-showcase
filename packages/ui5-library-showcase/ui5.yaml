@@ -1,0 +1,34 @@
+specVersion: '2.2'
+metadata:
+  name: ui5-lib-ui5.community.showcaselib
+type: library
+framework:
+  name: OpenUI5
+  version: "1.86.3"
+  libraries:
+    - name: sap.ui.core
+    - name: themelib_sap_fiori_3
+server:
+  customMiddleware:
+  - name: ui5-middleware-livereload
+    afterMiddleware: compression
+    configuration:
+      extraExts: "xml,json,properties"
+      path: ["src", "test"]
+---
+specVersion: "2.2"
+kind: extension
+type: project-shim
+metadata:
+  name: zxing-shim
+shims:
+  configurations:
+    '@zxing/library':
+      specVersion: "2.2"
+      type: module
+      metadata:
+        name: '@zxing/library'
+      resources:
+        configuration:
+          paths:
+            "/resources/ui5/community/showcaselib/lib/zxing/": "umd"

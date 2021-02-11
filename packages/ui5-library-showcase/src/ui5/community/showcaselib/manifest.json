@@ -1,0 +1,41 @@
+{
+    "_version": "1.30.0",
+    "sap.app": {
+        "id": "ui5.community.showcaselib",
+        "type": "library",
+        "applicationVersion": {
+            "version": "${version}"
+        },
+        "title": "The Definitely Missed Controls Most Wanted Library!"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        }
+    },
+    "sap.ui5": {
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "dependencies": {
+            "minUI5Version": "1.86.3",
+            "libs": {
+                "sap.ui.core": {}
+            }
+        },
+        "library": {
+            "i18n": {
+                "bundleUrl": "messagebundle.properties",
+                "supportedLocales": [
+                    "",
+                    "en"
+                ]
+            },
+            "css": true
+        }
+    }
+}

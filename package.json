@@ -1,0 +1,25 @@
+{
+  "name": "ui5-library-showcase-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Showcase the structure of UI5 Custom Control Libraries",
+  "scripts": {
+    "start": "yarn start:lib",
+    "start:app": "yarn workspace ui5-app start",
+    "start:lib": "yarn workspace ui5-library-showcase start",
+    "build:app": "yarn workspace ui5-app build",
+    "build:lib": "yarn workspace ui5-library-showcase build"
+  },
+  "keywords": [
+    "ui5",
+    "library",
+    "control",
+    "theming",
+    "i18n"
+  ],
+  "author": "Matthias Osswald, Peter Muessig, Volker Buzek, Marco Beier",
+  "license": "Beerware",
+  "workspaces": [
+    "packages/*"
+  ]
+}

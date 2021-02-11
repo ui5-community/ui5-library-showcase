@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Showcase of UI5 Custom Control Library (dark 😱)</title>
+    <script id="sap-ui-bootstrap" src="resources/sap-ui-core.js" data-sap-ui-libs="sap.ui.core,ui5.community.showcaselib" data-sap-ui-theme="sap_fiori_3_dark" data-sap-ui-async="true" data-sap-ui-oninit="startUp">
+    </script>
+    <script>
+        function startUp() {
+            sap.ui.require([
+                "sap/ui/core/mvc/XMLView",
+            ], async(XMLView) => {
+                const view = await XMLView.create({
+                    definition: `
+                        <mvc:View xmlns:mvc="sap.ui.core.mvc"
+                            xmlns="sap.m"
+                            xmlns:ui5comscl="ui5.community.showcaselib"
+                            height="100%">
+                            <App>
+                            <Page showHeader="false">
+                                <VBox alignItems="Center"
+                                    justifyContent="Center"
+                                    height="100%">
+                                <HBox justifyContent="SpaceAround">
+                                    <ui5comscl:QRCode text="GitHub Repository" data="https://github.com/ui5-community/ui5-library-showcase" />
+                                </HBox>
+                                </VBox>
+                            </Page>
+                            </App>
+                        </mvc:View>`,
+                });
+                view.placeAt("content");
+            });
+        }
+    </script>
+</head>
+
+<body class="sapUiBody" id="content"></body>
+
+</html>

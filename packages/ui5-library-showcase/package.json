@@ -1,0 +1,24 @@
+{
+  "name": "ui5-library-showcase",
+  "version": "0.1.0",
+  "private": true,
+  "description": "UI5 Custom Control Libraries to showcase the structure and OSS usage from NPM package!",
+  "author": "Matthias Osswald, Peter Muessig, Volker Buzek, Marco Beier",
+  "license": "Beerware",
+  "scripts": {
+    "start": "ui5 serve -o test-resources/ui5/community/showcaselib/QRCode.html",
+    "build": "ui5 build --all"
+  },
+  "devDependencies": {
+    "ui5-middleware-livereload": "^0.5.1"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-livereload",
+      "@zxing/library"
+    ]
+  },
+  "dependencies": {
+    "@zxing/library": "^0.18.3"
+  }
+}
