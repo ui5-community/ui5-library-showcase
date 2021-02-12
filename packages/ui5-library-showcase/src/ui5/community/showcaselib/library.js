@@ -10,7 +10,7 @@ sap.ui.define([
 ], () => {
 
     /**
-     * The Missed Controls library.
+     * The Community Showcase library.
      *
      * @namespace
      * @name ui5.community.showcaselib

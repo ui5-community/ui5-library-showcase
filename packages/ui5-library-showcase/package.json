@@ -2,7 +2,7 @@
   "name": "ui5-library-showcase",
   "version": "0.1.0",
   "private": true,
-  "description": "UI5 Custom Control Libraries to showcase the structure and OSS usage from NPM package!",
+  "description": "UI5 Custom Control Libraries to showcase the structure and OSS usage from NPM packages!",
   "author": "Matthias Osswald, Peter Muessig, Volker Buzek, Marco Beier",
   "license": "Beerware",
   "scripts": {
