@@ -2,37 +2,46 @@
  * ${copyright}
  */
 
-// Provides default renderer for ui5.community.showcaselib.BarcodeScanner
-sap.ui.define([], () => {
+sap.ui.loader.config({
+    shim: {
+        'ui5/community/showcaselib/lib/zxing/index': {
+            amd: true, // important: disable amd loaders if present to access the dep via the global export
+            exports: "ZXing"
+        }
+    }
+});
+
+sap.ui.define(["sap/ui/core/Core", './lib/zxing/index'], (Core, ZXing) => {
     "use strict";
 
-    const BarcodeScannerRenderer = {
+    const CodeWriter = new ZXing.BrowserQRCodeSvgWriter();
+
+    const QRCodeRenderer = {
         apiVersion: 2
     };
 
     /**
      * Renders the HTML for the given control, using the provided {@link sap.ui.core.RenderManager}.
      *
-     * @param {sap.ui.core.RenderManager} oRm the RenderManager that can be used for writing to the Render-Output-Buffer
-     * @param {ui5.community.showcaselib.BarcodeScanner} oBarcodeScanner an object representation of the control that should be rendered
+     * @param {sap.ui.core.RenderManager} rm the RenderManager that can be used for writing to the Render-Output-Buffer
+     * @param {ui5.community.showcaselib.QRCode} control an object representation of the control that should be rendered
      */
-    BarcodeScannerRenderer.render = (oRm, oQRCode) => {
-        const oMsgBndl = sap.ui.getCore().getLibraryResourceBundle("ui5.community.showcaselib");
-        const codeWriter = new ZXing.BrowserQRCodeSvgWriter();
-        oRm.openStart("div", oQRCode);
-        oRm.class("ui5ComScQRCode");
-        oRm.openEnd();
-        oRm.openStart("div", `${oQRCode.getId()}-qrcode`);
-        oRm.class("ui5ComScQRCodeSpot");
-        oRm.openEnd();
-        oRm.unsafeHtml((new XMLSerializer()).serializeToString(codeWriter.write(oQRCode.getData(), 300, 300)));
-        oRm.close("div");
-        oRm.openStart("div");
-        oRm.openEnd();
-        oRm.text(`${oMsgBndl.getText("ANY_TEXT")}: ${oQRCode.getText()}`);
-        oRm.close("div");
-        oRm.close("div");
+    QRCodeRenderer.render = (rm, control) => {
+        const i18n = Core.getLibraryResourceBundle("ui5.community.showcaselib");
+        rm.openStart("div", control);
+        rm.class("ui5ComScQRCode");
+        rm.openEnd();
+        rm.openStart("div", `${control.getId()}-qrcode`);
+        rm.class("ui5ComScQRCodeSpot");
+        rm.openEnd();
+        rm.unsafeHtml((new XMLSerializer()).serializeToString(CodeWriter.write(control.getData(), 300, 300)));
+        rm.close("div");
+        rm.openStart("div");
+        rm.openEnd();
+        rm.text(`${i18n.getText("ANY_TEXT")}: ${control.getText()}`);
+        rm.close("div");
+        rm.close("div");
     };
 
-    return BarcodeScannerRenderer;
+    return QRCodeRenderer;
 });

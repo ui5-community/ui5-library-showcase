@@ -2,21 +2,11 @@
  * ${copyright}
  */
 
-sap.ui.loader.config({
-    shim: {
-        'ui5/community/showcaselib/lib/zxing/index': {
-            amd: true, // important: disable amd loaders if present to access the dep via the global export
-            exports: "ZXing"
-        }
-    }
-});
-
 sap.ui.define([
     './library',
     'sap/ui/core/Control',
-    './QRCodeRenderer',
-    './lib/zxing/index'
-], (library, Control, QRCodeRenderer, zxing) => {
+    './QRCodeRenderer'
+], (library, Control, QRCodeRenderer) => {
 
     /**
      * Constructor for a new QRCode.

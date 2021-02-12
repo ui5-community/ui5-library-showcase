@@ -11,10 +11,10 @@
   },
   "devDependencies": {
     "@ui5/cli": "^2.9.3",
-    "ui5-middleware-livereload": "*"
+    "ui5-middleware-livereload": "*",
+    "@sapui5/ts-types": "1.86.3"
   },
   "dependencies": {
-    "@sapui5/ts-types": "1.86.3",
     "ui5-library-showcase": "0.1.0"
   },
   "ui5": {
