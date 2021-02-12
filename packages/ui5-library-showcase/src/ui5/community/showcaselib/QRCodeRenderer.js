@@ -11,7 +11,10 @@ sap.ui.loader.config({
     }
 });
 
-sap.ui.define(["sap/ui/core/Core", './lib/zxing/index'], (Core, ZXing) => {
+sap.ui.define([
+    "sap/ui/core/Core", 
+    './lib/zxing/index'
+], (Core, ZXing) => {
     "use strict";
 
     const CodeWriter = new ZXing.BrowserQRCodeSvgWriter();

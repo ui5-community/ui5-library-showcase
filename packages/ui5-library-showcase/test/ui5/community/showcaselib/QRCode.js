@@ -1,6 +1,6 @@
-sap.ui.define(["ui5/community/showcaselib/QRCode"], (
-    QRCode
-) => {
+sap.ui.define([
+    "ui5/community/showcaselib/QRCode"
+], (QRCode) => {
 
     new QRCode({
         text: "OpenUI5",
