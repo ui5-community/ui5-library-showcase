@@ -18,14 +18,14 @@ sap.ui.define([
      * The <code>ui5.community.showcaselib.QRCode</code> control can be used to render QRCodes.
      * @extends sap.ui.core.Control
      *
-     * @author OpenUI5 community
+     * @author OpenUI5 Community
      * @version ${version}
      *
      * @constructor
      * @public
      * @alias ui5.community.showcaselib.QRCode
      */
-    var QRCode = Control.extend("ui5.community.showcaselib.QRCode", /** @lends ui5.community.showcaselib.QRCode.prototype */ {
+    const QRCode = Control.extend("ui5.community.showcaselib.QRCode", /** @lends ui5.community.showcaselib.QRCode.prototype */ {
         metadata: {
             library: "ui5.community.showcaselib", // can be omitted when control is in same namespace as library
             properties: {

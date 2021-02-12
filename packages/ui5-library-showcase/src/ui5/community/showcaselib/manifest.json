@@ -6,7 +6,7 @@
         "applicationVersion": {
             "version": "${version}"
         },
-        "title": "The Definitely Missed Controls Most Wanted Library!"
+        "title": "The Community Showcase Library!"
     },
     "sap.ui": {
         "technology": "UI5",
