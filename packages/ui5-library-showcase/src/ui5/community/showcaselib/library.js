@@ -3,11 +3,12 @@
  */
 
 /**
- * Initialization Code and shared classes of library
+ * Initialization Code and shared classes of library ui5.community.showcaselib
  */
 sap.ui.define([
     'sap/ui/core/library' // library dependency
 ], () => {
+    "use strict";
 
     /**
      * The Community Showcase library.

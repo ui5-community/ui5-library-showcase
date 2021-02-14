@@ -2,14 +2,20 @@
   "name": "ui5-library-showcase",
   "version": "0.1.0",
   "private": true,
-  "description": "UI5 Custom Control Libraries to showcase the structure and OSS usage from NPM packages!",
+  "description": "UI5 Custom Control Libraries to showcase the structure and OSS usage from NPM packages using ES6 syntax!",
   "author": "Matthias Osswald, Peter Muessig, Volker Buzek, Marco Beier",
   "license": "Beerware",
   "scripts": {
     "start": "ui5 serve -o test-resources/ui5/community/showcaselib/QRCode.html",
+    "test": "karma start --browsers=ChromeHeadless --singleRun=true",
+    "testsuite": "ui5 serve -o test-resources/ui5/community/showcaselib/qunit/testsuite.qunit.html",
     "build": "ui5 build --all"
   },
   "devDependencies": {
+    "karma": "^6.1.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-cli": "^2.0.0",
+    "karma-ui5": "^2.3.3",
     "ui5-middleware-livereload": "^0.5.1"
   },
   "ui5": {

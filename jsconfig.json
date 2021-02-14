@@ -1,7 +1,7 @@
 {
   "include": [
-      "**/*.js",
-      "**/*.json",
+      "packages/**/*.js",
+      "packages/**/*.json",
       "node_modules/@sapui5/ts-types/types",
   ]
 }
