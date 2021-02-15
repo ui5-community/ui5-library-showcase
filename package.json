@@ -20,7 +20,7 @@
     "i18n"
   ],
   "author": "Matthias Osswald, Peter Muessig, Volker Buzek, Marco Beier",
-  "license": "Beerware",
+  "license": "Apache-2.0",
   "workspaces": [
     "packages/*"
   ]
