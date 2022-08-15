@@ -1,13 +1,13 @@
-specVersion: '2.2'
+specVersion: '2.6'
 metadata:
   name: ui5-lib-ui5.community.showcaselib
 type: library
 framework:
   name: OpenUI5
-  version: "1.86.3"
+  version: "1.105.0"
   libraries:
     - name: sap.ui.core
-    - name: themelib_sap_fiori_3
+    - name: themelib_sap_horizon
 server:
   customMiddleware:
   - name: ui5-middleware-livereload
@@ -16,7 +16,7 @@ server:
       extraExts: "xml,json,properties"
       path: ["src", "test"]
 ---
-specVersion: "2.2"
+specVersion: "2.6"
 kind: extension
 type: project-shim
 metadata:
@@ -24,7 +24,7 @@ metadata:
 shims:
   configurations:
     '@zxing/library':
-      specVersion: "2.2"
+      specVersion: "2.6"
       type: module
       metadata:
         name: '@zxing/library'

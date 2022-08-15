@@ -1,5 +1,5 @@
 {
-    "_version": "1.30.0",
+    "_version": "1.44.0",
     "sap.app": {
         "id": "ui5.community.showcaselib",
         "type": "library",
@@ -22,7 +22,7 @@
             "cozy": true
         },
         "dependencies": {
-            "minUI5Version": "1.86.3",
+            "minUI5Version": "1.105.0",
             "libs": {
                 "sap.ui.core": {}
             }

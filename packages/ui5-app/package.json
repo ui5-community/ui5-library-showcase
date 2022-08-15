@@ -1,6 +1,6 @@
 {
   "name": "ui5-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "UI5 application to showcase the consumption of UI5 Custom Control Libraries",
   "private": true,
   "author": "Matthias Osswald, Peter Muessig, Volker Buzek, Marco Beier",
@@ -10,9 +10,9 @@
     "build": "ui5 build --all"
   },
   "devDependencies": {
-    "@ui5/cli": "^2.9.3",
+    "@ui5/cli": "^2.14.10",
     "ui5-middleware-livereload": "*",
-    "@sapui5/ts-types": "1.86.3"
+    "@sapui5/ts-types": "1.105.0"
   },
   "dependencies": {
     "ui5-library-showcase": "0.1.0"
