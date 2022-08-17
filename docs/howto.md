@@ -7,6 +7,7 @@ Creating control libraries in OpenUI5 docu: https://github.com/SAP/openui5/blob/
 Decide for a namespace.
 
 Decide for package name:
+
 * Naming convention: `ui5-lib-[LIB NAMESPACE]`
   * [LIB NAMESPACE] => hierachical namespace (dot separated, e.g. ui5.community.showcaselib)
 * Allows easy search on NPM registry (we can also use keywords)
@@ -21,7 +22,7 @@ $> cd src; mkdir -p ui5/community/showcaselib # sync namespaces and folder struc
 $> touch ui5/community/showcaselib/manifest.json
 ```
 
-Example [`manifest.json`](https://sapui5.hana.ondemand.com/resources/sap/ui/table/manifest.json)
+Example [`manifest.json`](https://ui5.sap.com/resources/sap/ui/table/manifest.json)
 
 ```bash
 $> touch ui5/community/showcaselib/library.js
@@ -30,10 +31,10 @@ $> touch ui5/community/showcaselib/library.js
 Copy & Paste the content from the control libraries documentation.
 
 Steps:
- * Adopt imports (remove jQuery!)
- * Adopt namespace 
- * Cleanup of code (...)
 
+* Adopt imports (remove jQuery!)
+* Adopt namespace
+* Cleanup of code (...)
 
 ```bash
 $> touch src/ui5/community/showcaselib/QRCode.js
@@ -119,4 +120,3 @@ use `sap.ui.loader.config()` for loading the 3rd party lib at dev-time for using
 when used in app, the test-page of the library is available at
 note: http://localhost:1081/test-resources/ui5/community/showcaselib/QRCode.html
 at dev-time (via `ui5 serve`)
-
